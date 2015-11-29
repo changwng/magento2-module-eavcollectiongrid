@@ -29,16 +29,8 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
         array $data = []
     ) {
         $this->_collectionFactory = $collectionFactory;
-        $this->_module = 'eavcollectiongrid';
         parent::__construct($context, $backendHelper, $data);
     }
-
-    /**
-     * Block Module
-     *
-     * @var string
-     */
-    protected $_module = 'adminhtml';
 
     /**
      * @return void
@@ -125,16 +117,5 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
         );
 
         return $this;
-    }
-
-    /**
-     * Return url of given row
-     *
-     * @param \Magento\Framework\DataObject $row
-     * @return string
-     */
-    public function getRowUrl($row)
-    {
-        return $this->getUrl($this->_module . '/*/edit', ['attribute_id' => $row->getAttributeId()]);
     }
 }
