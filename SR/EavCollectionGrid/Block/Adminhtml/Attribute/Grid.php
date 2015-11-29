@@ -1,10 +1,10 @@
 <?php
 /**
- * Product attributes grid
+ * attributes grid
  *
  * @author     Magento Core Team <core@magentocommerce.com>
  */
-namespace SR\EavCollectionGrid\Block\Adminhtml\Product\Attribute;
+namespace SR\EavCollectionGrid\Block\Adminhtml\Attribute;
 
 /**
  * @SuppressWarnings(PHPMD.DepthOfInheritance)
@@ -12,20 +12,20 @@ namespace SR\EavCollectionGrid\Block\Adminhtml\Product\Attribute;
 class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
 {
     /**
-     * @var \Magento\Catalog\Model\ResourceModel\Product\Attribute\CollectionFactory
+     * @var \SR\EavCollectionGrid\Model\ResourceModel\Attribute\CollectionFactory
      */
     protected $_collectionFactory;
 
     /**
      * @param \Magento\Backend\Block\Template\Context $context
      * @param \Magento\Backend\Helper\Data $backendHelper
-     * @param \Magento\Catalog\Model\ResourceModel\Product\Attribute\CollectionFactory $collectionFactory
+     * @param \SR\EavCollectionGrid\Model\ResourceModel\Attribute\CollectionFactory $collectionFactory
      * @param array $data
      */
     public function __construct(
         \Magento\Backend\Block\Template\Context $context,
         \Magento\Backend\Helper\Data $backendHelper,
-        \SR\EavCollectionGrid\Model\ResourceModel\Product\Attribute\CollectionFactory $collectionFactory,
+        \SR\EavCollectionGrid\Model\ResourceModel\Attribute\CollectionFactory $collectionFactory,
         array $data = []
     ) {
         $this->_collectionFactory = $collectionFactory;

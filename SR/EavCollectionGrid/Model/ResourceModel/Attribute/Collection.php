@@ -1,8 +1,8 @@
 <?php
-namespace SR\EavCollectionGrid\Model\ResourceModel\Product\Attribute;
+namespace SR\EavCollectionGrid\Model\ResourceModel\Attribute;
 
 /**
- * Catalog product EAV additional attribute resource collection
+ * attribute resource collection
  */
 class Collection extends \Magento\Eav\Model\ResourceModel\Entity\Attribute\Collection
 {
